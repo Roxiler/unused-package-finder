@@ -1,0 +1,31 @@
+{
+  "name": "unused-package",
+  "version": "1.1.0",
+  "description": "unused-package is a dependency analysing tool which lets you know which packages are not being used or if package is devDependency but installed as normal dependency",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roxiler/unused-package.git"
+  },
+  "author": "sai6855",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roxiler/unused-package/issues"
+  },
+  "homepage": "https://github.com/Roxiler/unused-package#readme",
+  "keywords": [
+    "react",
+    "react-native",
+    "next",
+    "node",
+    "dependencies",
+    "devDependencies",
+    "packages",
+    "unused packages",
+    "depcheck",
+    "unused dependencies"
+  ],
+  "contributors": [
+    "sai chand <saichand685@gmail.com>"
+  ]
+}
