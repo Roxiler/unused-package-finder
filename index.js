@@ -105,11 +105,17 @@ const findUnUsedPackages = async ({ entries = [] } = {}) => {
     const isPeerDependency = packageJsonDeps.some((packageDep) => {
       const packageJsonPath = `${startingPath}/node_modules/${packageDep}/package.json`;
 
-      const packageData = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+      try {
+        const packageData = JSON.parse(
+          fs.readFileSync(packageJsonPath, "utf-8")
+        );
 
-      return packageData.peerDependencies
-        ? !!packageData.peerDependencies[package]
-        : false;
+        return packageData.peerDependencies
+          ? !!packageData.peerDependencies[package]
+          : false;
+      } catch (error) {
+        return false;
+      }
     });
     return !isPeerDependency;
   });

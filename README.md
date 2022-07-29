@@ -7,13 +7,13 @@
 Using npm
 
 ```
-npm install unused-package
+npm install unused-package --save-dev
 ```
 
 Using yarn
 
 ```
-yarn add unused-package
+yarn add --dev unused-package 
 ```
 
 # Usage
