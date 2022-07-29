@@ -18,7 +18,7 @@ yarn add --dev unused-package
 
 # Usage
 
-**create a file named unused.js with below code**
+**create a file named unused.js in root directory with below code**
 
 ```
 const check = require("unused-package");
@@ -56,6 +56,17 @@ Example:
 "scripts":{
    "build": " node unused.js && next build",
 }
+```
+
+**OR**
+
+**create a seperate script to run unused.js file**
+
+```
+"scripts":{
+  "detect:unused:packages": " node unused.js"
+}
+
 ```
 
 **Note: Currently package is still in initial phase and if library returns and false positives please feel free to open an issue**

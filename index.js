@@ -40,7 +40,10 @@ const traverseDirectories = async (source) => {
 
             if (statement.includes("from")) {
               let packageName = statement.split("from")[1];
-              if (!packageName.trim().includes(".")) {
+              if (
+                !packageName.trim().includes("./") &&
+                !packageName.trim().includes("../")
+              ) {
                 packageName = packageName
                   .replace('"', "")
                   .replace('"', "")
@@ -57,7 +60,10 @@ const traverseDirectories = async (source) => {
 
             if (statement.includes("require(")) {
               let packageName = statement.split("require")[1];
-              if (!packageName.trim().includes(".")) {
+              if (
+                !packageName.trim().includes("./") &&
+                !packageName.trim().includes("../")
+              ) {
                 packageName = packageName
                   .replace("(", "")
                   .replace(")", "")

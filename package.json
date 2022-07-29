@@ -1,6 +1,6 @@
 {
   "name": "unused-package",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "unused-package is a dependency analysing tool which lets you know which packages are not being used or if package is devDependency but installed as normal dependency",
   "main": "index.js",
   "repository": {
