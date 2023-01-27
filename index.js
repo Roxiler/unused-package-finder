@@ -43,15 +43,8 @@ const traverseDirectories = async (source) => {
               if (
                 !packageName.trim().includes("./") &&
                 !packageName.trim().includes("../")
-              ) {
-                packageName = packageName
-                  .replace('"', "")
-                  .replace('"', "")
-                  .replace(";", "")
-                  .replace("'", "")
-                  .replace("'", "")
-                  .trim();
-
+              ) {    
+                packageName = packageName.replace(/[";']/g, "").trim()
                 if (!packagesInFiles.includes(packageName)) {
                   packagesInFiles.push(packageName);
                 }
@@ -64,16 +57,7 @@ const traverseDirectories = async (source) => {
                 !packageName.trim().includes("./") &&
                 !packageName.trim().includes("../")
               ) {
-                packageName = packageName
-                  .replace("(", "")
-                  .replace(")", "")
-                  .replace(";", "")
-                  .replace('"', "")
-                  .replace('"', "")
-                  .replace("'", "")
-                  .replace("'", "")
-                  .trim();
-
+                packageName = packageName.replace(/[(;"')]/g, "").trim()                 
                 if (!packagesInFiles.includes(packageName)) {
                   packagesInFiles.push(packageName);
                 }
